@@ -22,6 +22,17 @@ export default function Home() {
               priority
             />
           </a>
+          
+        </div>
+        <div>
+          <a href="../blogs">
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            Go to Blogs{" "}
+            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span>
+          </h2>
+          </a>
         </div>
       </div>
 
