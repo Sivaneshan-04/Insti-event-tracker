@@ -1,16 +1,29 @@
 'use client';
-import React from 'react';
-import { blogEvents } from './utils/data';
+import React, { useEffect ,useState} from 'react';
 import { useRouter } from 'next/navigation';
+import fetchData from './utils/fetchData';
 
 
 function BlogPage() {
+    const [blogEvents, setBlogEvents] = useState([]);
 
     const router = useRouter();
 
     const handleClick = (props) => {
         router.push('/blogs/' + props);
     }
+
+    useEffect(() => {
+        const fetchBlogData = async () => {
+          const { data, error } = await fetchData();
+          if (error) {
+            setError(error);
+          } else {
+            setBlogEvents(data);
+          }
+        };
+        fetchBlogData();
+      }, []);
 
 return (
     <div className="flex flex-wrap justify-center min-h-screen m-auto">

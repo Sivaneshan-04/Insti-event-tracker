@@ -35,5 +35,32 @@ export const blogEvents = [
         date: "2022-04-20",
         location: "Chicago, IL",
         speaker: "Sarah Thompson",
+    },
+    {
+        id: 5,
+        title: "Data Science Symposium",
+        shortDescription: "Discover the latest advancements in data science and machine learning.",
+        details: "This symposium will feature talks and workshops on topics like data analysis, predictive modeling, and deep learning.",
+        date: "2022-05-15",
+        location: "Seattle, WA",
+        speaker: "Michael Johnson",
+    },
+    {
+        id: 6,
+        title: "Mobile App Development Workshop",
+        shortDescription: "Learn how to build mobile apps for iOS and Android.",
+        details: "Join us for a hands-on workshop where we will cover topics such as mobile app design, development, and deployment.",
+        date: "2022-06-20",
+        location: "Los Angeles, CA",
+        speaker: "Emily Wilson",
+    },
+    {
+        id: 7,
+        title: "DevOps Conference",
+        shortDescription: "Explore the latest practices and tools in DevOps.",
+        details: "This conference will showcase talks and workshops on topics like continuous integration, continuous delivery, and infrastructure as code.",
+        date: "2022-07-25",
+        location: "Austin, TX",
+        speaker: "David Brown",
     }
 ];
