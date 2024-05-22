@@ -2,7 +2,6 @@ import React from 'react';
 import { createClient } from '../../../../utils/supabase/client';
 
 async function BlogIdPage({ params }) {
-
     const supabase = createClient();
 
     let { data: blog, error } = await supabase.from('blog_data').select('*').eq('id', params.blogId);
