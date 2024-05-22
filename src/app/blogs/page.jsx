@@ -26,22 +26,25 @@ function BlogPage() {
       }, []);
 
 return (
-    <div className="flex flex-wrap justify-center min-h-screen m-auto">
-        {blogEvents.map((event, index) => (
-            <div
-                key={index}
-                className="bg-white shadow-md rounded-lg p-4 m-4 w-64 h-96"
-                onClick={() => handleClick(index + 1)}
-            >
-                <h2 className="text-xl font-bold mb-2">{event.title}</h2>
-                <p className="text-gray-600 mb-2">{event.shortDescription}</p>
-                <p className="text-gray-600 mb-2">{event.details}</p>
-                <p className="text-gray-600 mb-2">{event.date}</p>
-                <p className="text-gray-600 mb-2">{event.location}</p>
-                <p className="text-gray-600 mb-2">{event.speaker}</p>
-            </div>
-        ))}
+  <div className="flex flex-wrap justify-center min-h-screen m-auto bg-gray-900">
+    <h1 className="text-3xl font-bold p-6 text-white text-center">Our Events Blog</h1>
+    <div className="grid grid-cols-1 p-5 md:p-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {blogEvents.map((event, index) => (
+        <div
+          key={event.id}
+          className={`bg-gray-800 shadow-lg rounded-lg p-4 hover:shadow-xl hover:bg-gray-700 transition duration-300`}
+          onClick={() => handleClick(event.id)}
+        >
+          <h2 className="text-xl font-bold mb-2 text-white">{event.title}</h2>
+          <p className="text-gray-300 mb-2">{event.shortDescription}</p>
+          <p className="text-gray-300 mb-2">{event.details}</p>
+          <p className="text-gray-300 mb-2">{event.date}</p>
+          <p className="text-gray-300 mb-2">{event.location}</p>
+          <p className="text-gray-300 mb-2">{event.speaker}</p>
+        </div>
+      ))}
     </div>
+  </div>
 );
 }
 

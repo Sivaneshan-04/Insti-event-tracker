@@ -10,16 +10,16 @@ async function BlogIdPage({ params }) {
     }
     blog = blog[0]; 
     return (
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex justify-center items-center h-screen bg-gray-700 dark:text-white">
             <div className="center-section m-auto p-3 md:p-7">
                 <div className="md:m-auto center-section">
-                    <p className="text-gray-500 py-1">{blog.location}</p>
-                    <h2 className="py-1 text-2xl font-bold">{blog.title}</h2>
-                    <p className="text-gray-500 py-1">{blog.shortDescription}</p>
-                    <p className="text-gray-500 py-1">{blog.speaker}</p>
-                    <p className="text-gray-500 py-1">{blog.date}</p>
+                    <p className="text-gray-300 py-1">{blog.location}</p>
+                    <h2 className="py-1 text-2xl text-white font-bold">{blog.title}</h2>
+                    <p className="text-gray-300 py-1">{blog.shortDescription}</p>
+                    <p className="text-gray-300 py-1">{blog.speaker}</p>
+                    <p className="text-gray-300 py-1">{blog.date}</p>
                 </div>
-                <div className="mt-4">
+                <div className="mt-4 text-gray-300">
                     {blog.details}
                 </div>
             </div>
