@@ -10,16 +10,23 @@ async function BlogIdPage({ params }) {
     }
     blog = blog[0]; 
     return (
-        <div className="flex justify-center items-center h-screen bg-gray-700 dark:text-white">
-            <div className="center-section m-auto p-3 md:p-7">
-                <div className="md:m-auto center-section">
-                    <p className="text-gray-300 py-1">{blog.location}</p>
-                    <h2 className="py-1 text-2xl text-white font-bold">{blog.title}</h2>
-                    <p className="text-gray-300 py-1">{blog.shortDescription}</p>
-                    <p className="text-gray-300 py-1">{blog.speaker}</p>
-                    <p className="text-gray-300 py-1">{blog.date}</p>
+        <div className=" h-screen">
+            <div className="center-section m-16 p-12 md:p-7">
+               <div className='flex flex-row'>
+                <div className="md:m-auto center-section w-2/3">
+                    <p className="text-slate-700 py-1">Location : <span className='font-bold'>{blog.location}</span></p>
+                    <h2 className="py-1 text-2xl font-bold">{blog.title}</h2>
+                    <p className="text-slate-700 py-1">{blog.shortDescription}</p>
+                    <div className='flex-row flex gap-10'>
+                    <p className="text-slate-700 py-1">Speaker : <span className='font-bold'>{blog.speaker}</span></p>
+                    <p className="text-slate-700 py-1">Date : <span className='font-bold'>{blog.date}</span></p>
+                    </div>
                 </div>
-                <div className="mt-4 text-gray-300">
+                <div className="flex justify-center w-1/3">
+                    <img src={blog.image} alt={blog.title} className="w-[300px] h-[280px] items-center" width={300} height={300} />
+                    </div>
+                </div> 
+                <div className="mt-4 text-slate-700 mx-auto">
                     {blog.details}
                 </div>
             </div>
